@@ -21,7 +21,7 @@ cabinet_door_price = 500
 
 prices = OrderedDict({
     #u'地板': 135,   # 扬子木地板团购价
-    u'地板': 150,   # 圣象折扣价
+    u'地板': 400,   # 圣象折扣价
     #u'地砖': 140 * (1000*1000) / (800*800),   # 中档偏上
     u'地砖': 80 * (1000*1000) / (800*800),   # 普通
     #u'墙砖': (10*(1000*1000)/(300*300)),       # 中档偏上
@@ -83,3 +83,19 @@ for k, v in majors_totals.items():
 print
 
 print u'合计：', sum(majors_totals.values())
+
+digital = OrderedDict([
+    (u'airport extreme', 1200),
+    (u'树莓派', 300),
+    (u'电视', 4000),
+    (u'音箱', 1000),
+    (u'NAS', 1000),
+    (u'XBOX', 3500),
+])
+
+print u'电子产品：'
+for k, v in digital.items():
+    print k, v
+print
+
+print u'合计：', sum(digital.values())
