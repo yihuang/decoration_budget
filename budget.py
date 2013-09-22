@@ -56,7 +56,9 @@ basic_totals = OrderedDict([
 ])
 
 majors_totals = OrderedDict([
-    (u'门（换大门）', 3000+800*3),
+    (u'防盗门', 3000),
+    (u'主卧次卧门', 1500*2),
+    (u'卫生间门', 1619),
     (u'多乐士套装', 1300),
     (u'客厅地板', prices[u'地板'] * sizes[u'客厅']),
     (u'房间地板', prices[u'地板'] * (sizes[u'主卧'] + sizes[u'次卧'])),
