@@ -52,45 +52,51 @@ prices = OrderedDict({
 })
 
 basic_totals = OrderedDict([
-    (u'卫生间基础工程', 3000),
-    (u'墙面天花刷漆', prices[u'刷漆'] * other_sizes[u'刷漆']),
-    (u'地面找平', prices[u'找平'] * (sizes[u'客厅'] + sizes[u'主卧'] + sizes[u'次卧'])),
-    (u'地砖铺设', prices[u'厨房地面铺砖'] * (sizes[u'厨房'] + sizes[u'阳台'] + sizes[u'卫生间'])),
-    (u'防水', prices[u'防水'] * (other_sizes[u'防水'] + other_sizes[u'地砖'])),
-    (u'墙砖铺设', prices[u'墙面铺砖'] * other_sizes[u'墙砖']),
+    (u'装修公司', 20000),
+    #(u'卫生间基础工程', 3000),
+    #(u'墙面天花刷漆', prices[u'刷漆'] * other_sizes[u'刷漆']),
+    #(u'地面找平', prices[u'找平'] * (sizes[u'客厅'] + sizes[u'主卧'] + sizes[u'次卧'])),
+    #(u'地砖铺设', prices[u'厨房地面铺砖'] * (sizes[u'厨房'] + sizes[u'阳台'] + sizes[u'卫生间'])),
+    #(u'防水', prices[u'防水'] * (other_sizes[u'防水'] + other_sizes[u'地砖'])),
+    #(u'墙砖铺设', prices[u'墙面铺砖'] * other_sizes[u'墙砖']),
     (u'水电改造', 7000),
-    #(u'各种安装', 2000),
-    (u'拆墙砌墙', 300),
+    ##(u'各种安装', 2000),
+    #(u'拆墙砌墙', 300),
 ])
 
 majors_totals = OrderedDict([
-    #(u'防盗门', 3000),
+    (u'厨卫吊顶', 2500),    # 欧斯宝团购方案
+    (u'橱柜', 12000),       # 皮阿诺
+
+    (u'防盗门', 3000),
     (u'主卧次卧门', (1605+268)*2),
     (u'卫生间门', 1619+268),
-    (u'多乐士两套10L', 2180.00),
+    #(u'多乐士两套10L', 2180.00),
+    (u'封阳台', 6600),
+
     (u'地板', prices[u'地板'] * other_sizes[u'地板']),
     (u'踢脚线', prices[u'踢脚线'] * other_sizes[u'踢脚线']),
     (u'地砖', (sizes[u'卫生间'] + sizes[u'厨房'] + sizes[u'阳台']) * prices[u'地砖']),
     (u'墙砖', other_sizes[u'墙砖']*prices[u'墙砖']),
-    (u'厨卫吊顶', 2500),    # 欧斯宝团购方案
-    (u'衣柜', 5100),        # 好莱客报价
-    (u'橱柜', 10000),       # 皮阿诺
+
     (u'厨电', 4788 + 450),  # 老板两件套 + 侧吸装饰罩
-    (u'卫浴', 5000),
+    (u'卫浴', 6376),
+
+    (u'衣柜', 5100),        # 好莱客报价
     (u'热水器', 2600),      # 能率
     (u'鞋柜', 2000),
-    (u'主卧床', 2000),
-    (u'床垫', 2000),
+
+    #(u'主卧床', 2000),
+    #(u'床垫', 2000),
     (u'灯具', 2000),
-    (u'封阳台', 5000),
-    (u'餐桌', 2000),
-    (u'空调', 2000),
-    (u'沙发', 4000),
-    (u'次卧床', 2000),
-    (u'窗帘', 1000),
+    #(u'餐桌', 2000),
+    #(u'空调', 2000),
+    #(u'沙发', 4000),
+    #(u'次卧床', 2000),
+    #(u'窗帘', 1000),
 ])
 
-print u'人工辅料：'
+print u'基础装修：'
 for k, v in basic_totals.items():
     print k, v
 print
@@ -98,7 +104,7 @@ print
 print u'合计：', sum(basic_totals.values())
 print
 
-print u'主材：'
+print u'其他：'
 for k, v in majors_totals.items():
     print k, v
 print
